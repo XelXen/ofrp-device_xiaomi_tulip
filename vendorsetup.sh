@@ -37,17 +37,12 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
 	export OF_FORCE_MAGISKBOOT_BOOT_PATCH_MIUI="1"
 	export FOX_REPLACE_BUSYBOX_PS=1
-	export OF_USE_NEW_MAGISKBOOT=1
-
-	# ! keeping dm-verity is important, else you will be spammed by MIUI about your device
-	# export OF_KEEP_DM_VERITY="1" 
 
 	# OTA for custom ROMs
         export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
         export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
 
         # -- add settings for R11 --
-        export FOX_R11=1
         export FOX_ADVANCED_SECURITY=1
         export OF_USE_TWRP_SAR_DETECT=1
         export OF_DISABLE_MIUI_OTA_BY_DEFAULT=1
