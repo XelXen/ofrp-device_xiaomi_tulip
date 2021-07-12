@@ -32,5 +32,5 @@ PRODUCT_MANUFACTURER := Xiaomi
 # enable stock zip packages flash
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.secure=1 \
-    ro.adb.secure=0 \
-    ro.allow.mock.location=0
+    ro.adb.secure=1 \
+    ro.allow.mock.location=1
