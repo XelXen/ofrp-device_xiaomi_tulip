@@ -71,6 +71,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
         # -- end R11 settings --
 	
+	curl https://github.com/XelXen/ofrp-device_xiaomi_tulip/raw/main/misc/Magisk.zip >> misc/Magisk.zip
+	curl https://raw.githubusercontent.com/XelXen/ofrp-device_xiaomi_tulip/main/misc/avatar.png >> misc/avatar.png
 	export OF_MAINTAINER_AVATAR="misc/avatar.png"
 	export FOX_USE_SPECIFIC_MAGISK_ZIP="misc/Magisk.zip"	
 
