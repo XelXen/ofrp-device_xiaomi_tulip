@@ -1,7 +1,7 @@
 ro.product.brand=xiaomi
 ro.product.name=tulix
-ro.product.device=tulix
-ro.product.mod_device=tulix_global
+ro.product.device=tulip
+ro.product.mod_device=tulip_global
 ro.build.product=tulix
 ro.treble.enabled=true
 sys.usb.controller=a800000.dwc3
