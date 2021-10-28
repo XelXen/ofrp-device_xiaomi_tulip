@@ -25,7 +25,7 @@
 # *not* include it on all devices, so it is safe even with hardware-specific
 # components.
 
-LOCAL_PATH := device/xiaomi/tulix
+LOCAL_PATH := device/xiaomi/tulip
 
 # Architecture
 TARGET_ARCH := arm64
@@ -66,7 +66,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 
 ifeq ($(FOX_BUILD_FULL_KERNEL_SOURCES),1)
-  TARGET_KERNEL_SOURCE := kernel/xiaomi/tulix
+  TARGET_KERNEL_SOURCE := kernel/xiaomi/tulip
   BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
   TARGET_KERNEL_CONFIG := tulip-fox_defconfig
 else

@@ -18,7 +18,7 @@
 # 	Please maintain this if you use this script or any part of it
 #
 
-FDEVICE="tulix"
+FDEVICE="tulip"
 #set -o xtrace
 
 fox_get_target_device() {
