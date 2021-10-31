@@ -3,7 +3,7 @@
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
 # mount point   fstype  device                               device2          flags
-/boot           emmc    /dev/block/bootdevice/by-name/boot                    	flags=display="Boot";wipeingui
+/boot           emmc    /dev/block/bootdevice/by-name/boot                    	flags=display="Boot"
 /cache          ext4    /dev/block/bootdevice/by-name/cache                   	flags=display="Cache"
 /data           ext4    /dev/block/bootdevice/by-name/userdata                	flags=encryptable=footer;length=-16384;fileencryption=ice
 /system_image   emmc   	/dev/block/bootdevice/by-name/system			flags=display="System_image";backup=1;flashimg=1
