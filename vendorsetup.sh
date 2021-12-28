@@ -1,6 +1,6 @@
 #
 #	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2018-2021 The OrangeFox Recovery Project
+# 	Copyright (C) 2021 The OrangeFox Recovery Project
 #
 #	OrangeFox is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
@@ -17,7 +17,6 @@
 #
 # 	Please maintain this if you use this script or any part of it
 #
-
 FDEVICE="tulip"
 #set -o xtrace
 
@@ -36,7 +35,6 @@ if [ -z "$1" -a -z "$FOX_BUILD_DEVICE" ]; then
 fi
 
 if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
-	# -- Exporting vars --
 	export TARGET_ARCH=arm64
 	export OF_AB_DEVICE=0
 	export FOX_REPLACE_BUSYBOX_PS=1
@@ -84,18 +82,13 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_USE_NEW_MAGISKBOOT=1
 	export OF_MAINTAINER_AVATAR="./device/xiaomi/tulip/misc/avatar.png"
 	export LC_ALL="C"
-    # -- End here --
 
 	# let's see what are our build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
   	   export | grep "FOX" >> $FOX_BUILD_LOG_FILE
   	   export | grep "OF_" >> $FOX_BUILD_LOG_FILE
+   	   export | grep "TARGET_" >> $FOX_BUILD_LOG_FILE
   	   export | grep "TW_" >> $FOX_BUILD_LOG_FILE
-  	   export | grep "TARGET_" >> $FOX_BUILD_LOG_FILE
-  	fi
-
-   	for var in eng userdebug; do
-       	    COMMON_LUNCH_CHOICES twrp_"$FDEVICE"-eng
-   	done
+ 	fi
 fi
 #
