@@ -95,7 +95,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
   	fi
 
    	for var in eng userdebug; do
-       	    add_lunch_combo twrp_"$FDEVICE"-eng
+       	    COMMON_LUNCH_CHOICES twrp_"$FDEVICE"-eng
    	done
 fi
 #
