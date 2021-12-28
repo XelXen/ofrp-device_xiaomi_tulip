@@ -17,10 +17,12 @@
 # Release name
 PRODUCT_RELEASE_NAME := tulip
 
-$(call inherit-product, build/target/product/embedded.mk)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := tulip
@@ -28,9 +30,3 @@ PRODUCT_NAME := twrp_tulip
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi Redmi Note 6 Pro
 PRODUCT_MANUFACTURER := Xiaomi
-
-# enable ADB on boot
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.secure=1 \
-    ro.adb.secure=1 \
-    ro.allow.mock.location=1
